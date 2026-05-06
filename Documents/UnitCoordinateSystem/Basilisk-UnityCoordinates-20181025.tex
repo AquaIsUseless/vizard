@@ -1,0 +1,209 @@
+% README file for moduleDocumentationTemplate TeX template.
+% This template should be used to document all Basilisk modules.
+% Updated 20170711 - S. Carnahan
+%
+%-Copy the contents of this folder to your own _Documentation folder
+%
+%-Rename the Basilisk-moduleDocumentationTemplate.tex appropriately
+%
+% All edits should be made in one of:
+% sec_modelAssumptionsLimitations.tex
+% sec_modelDescription.tex
+% sec_modelFunctions.tex
+% sec_revisionTable.tex
+% sec_testDescription.tex
+% sec_testParameters.tex
+% sec_testResults.tex
+% sec_user_guide.tex
+%
+%-Some rules about referencing within the document:
+%1. If writing the suer guide, assume the module description is present
+%2. If writing the validation section, assume the module features section is present
+%3. Make no other assumptions about any sections being present. This allow for sections of the document to be used elsewhere without breaking.
+
+%In order to import some of these sections into a document in a different directory:
+%\usepackage{import}
+%Then, the sections are called with \subimport{relative path}{file} in order to \input{file} using the right relative path.
+%\import{full path}{file} can also be used if absolute paths are preferred over relative paths.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\documentclass[]{BasiliskReportMemo}
+
+\usepackage{cite}
+\usepackage{AVS}
+\usepackage{float} %use [H] to keep tables where you put them
+\usepackage{array} %easy control of text in tables
+\usepackage{graphicx}
+\bibliographystyle{plain}
+
+
+\newcommand{\submiterInstitute}{Autonomous Vehicle Simulation (AVS) Laboratory,\\ University of Colorado}
+
+
+\newcommand{\ModuleName}{UnityCoordinates}
+\newcommand{\subject}{Unity's Left-Handed Coordinate Frame Description}
+\newcommand{\status}{First Release}
+\newcommand{\preparer}{H. Schaub}
+\newcommand{\summary}{This technical note explains the left-handed, yes, left-handed coordinate frame being used by Unity, and how we map Basilisk position and attitude coordinates to and from Unity.}
+
+\begin{document}
+
+\makeCover
+
+%
+%	enter the revision documentation here
+%	to add more lines, copy the table entry and the \hline, and paste after the current entry.
+%
+\pagestyle{empty}
+{\renewcommand{\arraystretch}{2}
+\noindent
+\begin{longtable}{|p{0.5in}|p{3.5in}|p{1.07in}|p{0.9in}|}
+\hline
+{\bfseries Rev} & {\bfseries Change Description} & {\bfseries By}& {\bfseries Date} \\
+\hline
+1.0 & Initial Document & H. Schaub & 2018-10-25\\
+\hline
+
+\end{longtable}
+}
+
+
+
+\newpage
+\setcounter{page}{1}
+\pagestyle{fancy}
+
+\tableofcontents %Autogenerate the table of contents
+~\\ \hrule ~\\ %Makes the line under table of contents
+
+
+
+
+
+
+\section{Introduction}
+The unity visualization software using a left handed coordinate frame to display object.  This means the ordering of the frame base vectors satisfies a left-handed cross product rule as shown in Figure~\ref{fig:lefty}.  The first and second frame axis point to the right and up on the screen, while the 3rd axis is defined to be into the screen.
+
+\begin{figure}[h]
+	\centering
+	\subfigure[General Left-Handed Coordinate System]
+	{\label{fig:lefty}
+	\includegraphics[width=0.3 \textwidth]{Figures/leftz.png}} 
+	\subfigure[Left-Handed Rotation]
+	{\label{fig:lhRot} 
+	\includegraphics[width=0.3 \textwidth]{Figures/LeftHandedRotation.png}}  
+	\subfigure[Relationship between the Right-Handed Basilisk Frame and the Left-Handed Unity Coordinate Frame]
+	{\label{fig:frames} 
+	\includegraphics[]{Figures/frames}}  
+	\caption{Illustrations of Left-Handed Frame Behaviors.}
+	\label{fig:LH}
+\end{figure}
+
+
+Rotations also follow a left handed rule as illustrated in Figure~\ref{fig:lhRot}.  Facing the rotation vector a positive rotation in the left-hand world is a clock-wise rotation.  The challenge is how to map position and rotation coordinates from a right-handed world in Basilisk to a left-handed world in Unity for visualization purposes. 
+
+
+\section{Relation between Basilisk and Unity coordinate frame}
+Let \frameDefinition{R} be the Basilisk right-handed coordinate frame where $\hat{\bm r}_{1} \times \hat{\bm r}_{2} = + \hat{\bm r}_{3}$, while \frameDefinition{L} is the left-handed Unity coordinate frame where $\hat{\bm l}_{1} \times \hat{\bm l}_{2} = - \hat{\bm l}_{3}$.  Figure~\ref{fig:frames} illustrates how the two frames are related.  The frame base vectors map onto each other using:
+\begin{subequations}
+\begin{align}
+	\hat{\bm l}_{1} &= \hat{\bm r}_{2} 
+	\\
+	\hat{\bm l}_{2} &= \hat{\bm r}_{3} 
+	\\
+	\hat{\bm l}_{3} &= -\hat{\bm r}_{1} 		
+\end{align}
+\end{subequations}
+
+
+\section{Mapping Position Vectors between Basilisk and Unity}
+Let the position vector $\bm d$ be expressed in $\cal R$ and $\cal L$ frame components as
+\begin{equation}
+	\leftexp{R}{\bm d} = \leftexp{R}{\begin{bmatrix} d_{1,r} \\ d_{2,r} \\ d_{3,r} \end{bmatrix}} 
+	\quad\quad\quad
+	\leftexp{L}{\bm d} = \leftexp{L}{\begin{bmatrix} d_{1,l} \\ d_{2,l} \\ d_{3,l} \end{bmatrix}} 	
+\end{equation}
+The Basilisk vector components are then mapped to Unity position vector components using:
+\begin{subequations}
+\label{eq:posMapping}
+\begin{align}
+	d_{1,l} &= d_{2,r}
+	\\
+	d_{2,l} &= d_{3,r}
+	\\
+	d_{3,l} &= -d_{1,r}
+\end{align}
+\end{subequations}
+
+
+
+
+\section{Mapping Basilisk Attitude Coordinates to Unity Attitude Coordinates}
+The mathematics of the attitude kinematics is the same within right-handed or left-handed frames as long as the orientations are defined relative to frames of the same handedness.  This section illustrates how to convert quaternion or Modified Rodrigues Parameters (MRPs)\cite{schaub} when transitioning from a right-handed Basilisk frame to a left-handed Unity frame.  
+
+\subsection{Principal Rotation Vector Components}
+The principal vector components map from the $\cal R$ to the $\cal L$ frame using Eq.~\eqref{eq:posMapping} to yield
+\begin{subequations}
+\label{eq:eHat}
+\begin{align}
+	e_{1,l} &= e_{2,r}
+	\\
+	e_{2,l} &= e_{3,r}
+	\\
+	e_{3,l} &= -e_{1,r}
+\end{align}
+\end{subequations}
+ The rotation angle about the $\hat{\bm e}$ maps using $\phi_{l} = - \phi_{r}$. 
+ 
+\subsection{Quaternions}
+Assume a Basilisk coordinate frame orientation is defined through  quaternions (also called Euler Parameters) $\bm q = (q_{0}, q_{1}, q_{2}, q_{3})$ where $q_{0}$ is the scalar part of the quaternion and $q_{1}$, $q_{2}$ and $q_{3}$ are the components of the vectorial part of the quaternion.  In terms of the principal rotation vector $\hat{\bm e} = (e_{1}, e_{2}, e_{3})$ and angle $\phi$ the quaternions are defined as\cite{schaub}
+\begin{subequations}
+\label{eq:quaternion}
+\begin{align}
+	q_{0} &= \cos\left( \frac{\phi}{2} \right) \\
+	q_{1} &=  e_{1} \sin\left( \frac{\phi}{2} \right) \\
+	q_{2} &=  e_{2} \sin\left( \frac{\phi}{2} \right) \\
+	q_{3} &=  e_{3} \sin\left( \frac{\phi}{2} \right) 
+\end{align}
+\end{subequations}
+
+Applying the principal rotation parameter transformation in Eq.~\eqref{eq:eHat}  to Eqs.~\eqref{eq:quaternion}, the right-handed to left-handed quaternion mapping is founds to be
+ \begin{subequations}
+\label{eq:quaternionLeft}
+\begin{align}
+	q_{0,l} &= \cos\left( \frac{-\phi_{r}}{2} \right)  = \cos\left( \frac{\phi_{r}}{2} \right) = q_{0,r} \\
+	q_{1,l} &=  e_{1,l} \sin\left( \frac{\phi_{l}}{2} \right) =   -e_{2,r} \sin\left( \frac{\phi_{r}}{2} \right)  = -q_{2,r}\\
+	q_{2,l} &=  e_{2_{l}} \sin\left( \frac{\phi_{l}}{2} \right) =   -e_{3,r} \sin\left( \frac{\phi_{r}}{2} \right)  = -q_{3,r}\\
+	q_{3,l} &=  e_{3_{l}} \sin\left( \frac{\phi_{l}}{2} \right) =  e_{1,r} \sin\left( \frac{\phi_{r}}{2} \right)  = q_{1,r}
+\end{align}
+\end{subequations}
+
+
+
+\subsection{Modified Rodrigues Parameters}
+The general mapping between quaternion set $\bm q$ and an MRP set $\bm\sigma = (\sigma_{1}, \sigma_{2}, \sigma_{3})$ is given by\cite{schaub}
+\begin{equation}
+	\label{eq:q2MRP}
+	\sigma_{i} = \frac{q_{i}}{1+q_{0}} \quad\quad\quad \text{ for } i=1,2,3
+\end{equation}
+Using Eqs.~\eqref{eq:quaternionLeft}, the mapping from right-handed Basilisk MRPs to left-handed Unity MRP is given by
+ \begin{subequations}
+\label{eq:quaternionLeft}
+	\begin{align}
+		\sigma_{1,l} &= \frac{q_{1,l}}{1+q_{0,l}}  =  \frac{-q_{2,r}}{1+q_{0,r}}  = -\sigma_{2,r} \\
+		\sigma_{2,l} &= \frac{q_{2,l}}{1+q_{0,l}}  =  \frac{-q_{3,r}}{1+q_{0,r}}  = -\sigma_{3,r} \\
+		\sigma_{3,l} &= \frac{q_{3,l}}{1+q_{0,l}}  =  \frac{q_{1,r}}{1+q_{0,r}}  = \sigma_{1,r} 
+	\end{align}
+\end{subequations}
+
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography} %This includes references used and mentioned.
+
+\end{document}

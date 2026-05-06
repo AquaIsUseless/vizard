@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/VizardStartupScene.unity
+    guid: 0e944655f7f954e6b911f813c7e927e7
+  - enabled: 1
+    path: Assets/Scenes/VizardVR_MainScene.unity
+    guid: f62ca1c5fc9653c49ac9373d9837014c
+  - enabled: 1
+    path: Assets/Scenes/VizardMainScene.unity
+    guid: 0d79dccc42e97433591fc1d2ac6ca8a8
+  m_configObjects:
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 679b49ae1280e6549942b031e1c73e40,
+      type: 2}
+    com.unity.addressableassets: {fileID: 11400000, guid: 018fa4de50800493eae9d574b331426b,
+      type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: ee605fcb2f93e0549b58210defcc3be0,
+      type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 9e71a3bdc523f594291e68c7b430c152,
+      type: 3}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: aee68ab9f22433b43b7dca41e9526b4c,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: e6c305caecc9d4547b83c4a5eaa6e797,
+      type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: c9a6832eed1d6ba4d960003f6abdcdcd,
+      type: 2}
+  m_UseUCBPForAssetBundles: 0

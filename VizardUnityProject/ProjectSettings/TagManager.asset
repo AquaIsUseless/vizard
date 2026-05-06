@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Planet
+  - Spacecraft
+  - DataManager
+  - Line
+  - GUIManager
+  - GUIPanel
+  - OriginTarget
+  - InstrumentCamera
+  - ReflectiveSolarPanel
+  - DefaultMainLight
+  - RadialMenu
+  - Sun
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - SpacecraftUnlit
+  - Gravity
+  - TrueSizeBodyColliders
+  - OrbitLine
+  - Spacecraft
+  - CustomModel
+  - CameraFrustrum
+  - Antenna
+  - GroundLocationCones
+  - HeadsUpDisplays
+  - PostProcessing1
+  - PostProcessing2
+  - PostProcessing3
+  - PostProcessing4
+  - PostProcessing5
+  - HUDshells
+  - DepthTest
+  - LabelMarkers
+  - 
+  - VR_UI_Raycast
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: MenuSprites
+    uniqueID: 824848375
+    locked: 0
+  m_RenderingLayers:
+  - Default

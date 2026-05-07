@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using System.Collections;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 /// <summary>
 /// Handles user input to VR controllers to pan or zoom the camera rig or
@@ -44,7 +45,6 @@ public class VizardVR_MainCameraMovementController : MainCameraMovementControlle
         new[] {new Vector3(0, -1, 0), Vector3.forward} //Bottom
     };
 
-#if VIZARD_OPENXR
     [Header("VR Input")] [Tooltip("Input action map to use")]
     public InputActionAsset inputActionAsset;
 
@@ -59,7 +59,7 @@ public class VizardVR_MainCameraMovementController : MainCameraMovementControlle
 
     [Tooltip("Right controller forward marker")]
     public Transform rightEndMarker;
-
+#if VIZARD_OPENXR
     // Input actions required for input to main camera movement and target selection
     private InputAction leftThumbstick;
     private InputAction rightThumbstick;

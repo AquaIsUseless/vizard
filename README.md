@@ -16,26 +16,22 @@ Cloning Vizard
    https://cloud.unity.com/home/organizations/20066127084220/onboarding/post-download?locale=en&code=-FhAVEDtYJJ3vkdQlLptMQ012f&locale=en&session_state=37b2476116825f76831f9c6ebdad70ce7aad257405100dd0b5febc21cabe2f37.714TivAMP2dGdXHX_L5osA004f
 
    and follow their instructions to install the Unity Hub for your platform on your machine.
-2. **Install the Unity6000.0 LTS editor on your machine.** Vizard is currently based on the Unity6000.0.71f1 release.
+2. **Install the Unity6000.0.68f1 LTS editor on your machine.** Vizard is currently based on this Unity Editor version.
    1. In the Unity Hub, click "Installs" on the left side of the panel to see the Installs tab.
-   2. Click the "Install Editor" on the top right.
-   3. Select the most recommended Unity 6000.0.xx LTS release (it should be 6000.0.58f2 or newer) by clicking the "Install" button to the right.
-   4. Select any of the additional downloads shown that are desired. Items to consider:
+   2. Click the "Install Editor" button on the top right.
+   3. Click the "Archive" tab at the top of the panel. Click the "download archive link" to go to the Unity Archive website.
+   4. On the Unity download archive, make sure Unity 6 is selected and then select "LTS" from the row of options below.
+   5. Scroll down to the 6000.0.68f1 (released Feb 18, 2026) and click Install to the right. 
+   6. A dialog box will ask to "Open Unity Hub?", click the "Open Unity Hub" button.
+   7. Select the desired Unity Editor for your platform. 
+   8. A panel will open with "Install Unity 6.0 (6000.0.68f1)" at the top. There will be a list of additional installation options. Select any of the additional downloads shown that are desired. Items to consider:
       - Visual Studio Code
       - Linux Build Support (Mono)
       - Mac Build Support (IL2CPP)
       - Windows Build Support (Mono)
-4. **Check-out the develop branch and clone the Vizard repository.**
-5. **Enable git lfs in your local repository and pull the Vizard content.** Vizard uses git lfs for texture and model files (see the .gitattributes file for specifics).
-   1. Install git lfs on your computer (if not installed)
-   2. In a terminal, navigate to your local repository and enable git lfs:
-
-         `git lfs install`
-
-
-   3. Pull the Vizard git lfs content:
-      
-         `git lfs pull`
+    9. Click Install to have Unity Hub install the Editor and all additional download options. 
+    
+3. **Check-out the master branch and clone the Vizard repository.** Note that Vizard uses git lfs for texture and model files (see the .gitattributes file for specifics) and cloning will pull down the necessary git lfs files. 
       
 6. **Open the Vizard Unity Project.**
    1. Start the Unity Hub.
@@ -44,7 +40,7 @@ Cloning Vizard
    4. In the Unity Hub project list, click on the newly added project to open it.
       (Note: If your installation Unity6000.0 does not match the repository's last used version, the Unity Editor will ask you to confirm opening the project in a non-matching editor, click Yes)
 7. **Load the VizardStartupScene in the Unity Editor.** Once the VizardUnityProject has finished importing, type "VizardStartupScene" in the Editor Project search bar (bottom center). Double-click on the VizardStartupScene Unity asset shown in the results to open the scene in the Hierarchy (top left).
-8. **Install TMP Essentials Unity Package.** After completing starting the project, the Unity Editor will pop up the "TMP Importer" panel. Click the "Import TMP Essentials" button to add TextMeshPro UI asset support to the project. After the TMP Essentials have installed, you can close the panel (TMP Examples & Extras and not necessary and can be skipped).
+8. **Install TMP Essentials Unity Package.** After completing starting the project, click inside the hierarchy and open the StartUpCanvas>Panel>VersionText. This will help force the Unity Editor to pop up the "TMP Importer" panel. Click the "Import TMP Essentials" button to add TextMeshPro UI asset support to the project. After the TMP Essentials have installed, you can close the panel (TMP Examples & Extras and not necessary and can be skipped).
 9. **Test local installation.** Press the Play button at the top center of the Unity Editor and in the Game screen, use the "Select" button to navigate to a Basilisk scenario .bin file to confirm successful installation.
 10. **Optional: Install C# IDE.** A C# IDE is recommended for script editing. Both Visual Studio and JetBrains Rider have optional packages to support Unity Development. 
 

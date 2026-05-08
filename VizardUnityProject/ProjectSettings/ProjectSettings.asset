@@ -72,6 +72,7 @@ PlayerSettings:
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 1
   androidUseSwappy: 0
+  androidDisplayOptions: 1
   androidBlitType: 0
   androidResizeableActivity: 0
   androidDefaultWindowWidth: 1920
@@ -149,7 +150,6 @@ PlayerSettings:
   - {fileID: -944628639613478452, guid: 9e71a3bdc523f594291e68c7b430c152, type: 3}
   - {fileID: 11400000, guid: ee605fcb2f93e0549b58210defcc3be0, type: 2}
   - {fileID: 0}
-  - {fileID: 7479985154986749695, guid: e6c305caecc9d4547b83c4a5eaa6e797, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1

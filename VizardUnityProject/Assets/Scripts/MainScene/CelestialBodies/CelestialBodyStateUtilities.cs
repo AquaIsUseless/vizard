@@ -546,41 +546,19 @@ public static class CelestialBodyStateUtilities{
     /// <param name="newTargetIsSC">True if the new main camera target is a spacecraft or effector</param>
     public static void AdjustAtmosphereSettingsForNewCameraTarget(GameObject newTarget, GameObject oldTarget, bool newTargetIsSC)
     {
-        GameObject oldPlanet;
-        GameObject newPlanet;
-		
-        if (oldTarget.CompareTag("Spacecraft"))
+        GameObject planetCameraTarget = newTarget;
+        if (newTarget.CompareTag("Spacecraft"))
         {
-            oldPlanet = CelestialBodiesList[
-                oldTarget.GetComponent<SpacecraftController>().spacecraftParentBodyIndex];
-        }
-        else
-        {
-            oldPlanet = oldTarget;
-        }
-
-        if (newTargetIsSC)
-        {
-            newPlanet = CelestialBodiesList[
+            planetCameraTarget= CelestialBodiesList[
                 newTarget.GetComponent<SpacecraftController>().spacecraftParentBodyIndex];
         }
-        else
+       
+        foreach (GameObject planet in CelestialBodiesList)
         {
-            MainCameraUtilities.ForceSpacecraftLocalView =
-                false; //Because user has chosen a non-spacecraft camera target
-            newPlanet = newTarget;
+            if (!planet.CompareTag("Sun")){
+                planet.GetComponent<PlanetController>().EnableAtmosphereCalculations(String.Equals(planetCameraTarget.name,planet.name), true);
+            }
         }
-
-        if ((newPlanet != oldPlanet) &&(!oldPlanet.CompareTag("Sun")))
-        {
-            oldPlanet.GetComponent<PlanetController>().EnableAtmosphereCalculations(false, true);
-        }
-
-        if (!newPlanet.CompareTag("Sun") )
-        {
-            newPlanet.GetComponent<PlanetController>().EnableAtmosphereCalculations(true, true);
-        }
-		
     }
 
     public static void CalculateRotatingFramePositionAndVelocityHistories()

@@ -48,9 +48,11 @@ Building a Vizard Application with the Unity Editor
 ---------------------------------
 1. In the Unity Editor, open the Build panel (File>Build Profiles)
 2. Select the desired target platform from the left-hand list. Note: If the platform you wish to build for is not listed, return to the Unity Hub and install support for the desired platform.
-3. Confirm that the VizardStartupScene and the VizardMainScene are checked in the Scene List (right panel).
-4. Click "Build" or "Build And Run" to build the app at the location you select. (Note that the first build for each target platform will take a long time as Unity compiles shaders for the platform. Subsequent builds will be much faster. Rebasing the project on a newer release of the Unity Editor will incur the long shader compiles as well.)
-5. Note: Users of the Vizard Application will have to install any desired optional Vizard Addressables bundles locally on their machine. They will not be included in the built application.
+3. Confirm that the VizardStartupScene and the VizardMainScene are checked in the Scene List (right panel). If not:
+   1. Select "Scene List" from the left-hand panel.
+   2. In the Scene tab, enable both scenes by checking their boxes.  
+5. Click "Build" or "Build And Run" to build the app at the location you select. (Note that the first build for each target platform will take a long time as Unity compiles shaders for the platform. Subsequent builds will be much faster. Rebasing the project on a newer release of the Unity Editor will incur the long shader compiles as well.)
+6. Note: Users of the Vizard Application will have to install any desired optional Vizard Addressables bundles locally on their machine. They will not be included in the built application.
 
 Optional: Install Crosstales File Browser PRO
 ---------------------------------
@@ -62,17 +64,9 @@ https://assetstore.unity.com/packages/tools/utilities/file-browser-pro-98713?_ga
 5. In the right panel, click "Import 2024.1.1 to project" (or newer version, if available and desired)
 6. In the "Import Unity Package" panel that opens, click the "Import" button (bottom right). Note: It is recommended you import the entire File Browser PRO package unless you are familiar with its contents.
 7. The "FB PRO" panel will pop up. Close the FB PRO panel.
-8. In the Project tab (bottom left), navigate to:
-
-    `Plugins\crosstales\FileBrowser\Resources\Prefabs\`
-    and drag the FileBrowser prefab to move it to:
-    
-    `Resources\Prefabs\`
-9. Click on the FileBrowser prefab in the Project panel to make it active in the Inspector tab (right).
-10. In the Inspector tab (right) of the Unity Editor, enable "Allow Sync Calls" under macOS Settings.
-11. Open the Unity Player Settings by navigating to Edit>Project Settings. Click on "Player" in the left-hand list.
-12. Scroll down to the Scripting Define Symbols in the Player Settings. Click the + button and type "USE_NATIVE_FILE_BROWSER" into the newly added space. Click "Apply".
-13. Press Play in the UnityEditor and then "Select" to test the newly added platform native file browser.
+8. Open the Unity Player Settings by navigating to Edit>Project Settings. Click on "Player" in the left-hand list.
+9. Scroll down to the Scripting Define Symbols in the Player Settings. Click the + button and type "USE_NATIVE_FILE_BROWSER" into the newly added space. Click "Apply".
+10. Press Play in the UnityEditor and then "Select" to test the newly added platform native file browser.
 
 Optional: Install HD Materials and other optional Vizard Addressables bundles assets
 ---------------------------------

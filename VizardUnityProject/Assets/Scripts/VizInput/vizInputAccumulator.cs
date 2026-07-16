@@ -106,7 +106,9 @@ public class VizInputAccumulator : MonoBehaviour
                 Keys = GetCurrentKeys()
             }
         };
-        
+
+        vizInputMessage.PlaybackState = MessageList.PlaybackPaused ? PlaybackState.PlaybackPaused : PlaybackState.PlaybackPlaying;
+
         if (eventDialogManager != null) //Because still in start-up screen
         {
             vizInputMessage.BroadcastSyncSettings = GetCurrentBroadcastSyncSettings();

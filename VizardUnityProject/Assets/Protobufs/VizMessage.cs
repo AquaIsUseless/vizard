@@ -200,32 +200,35 @@ namespace VizProtobufferMessage {
             "DQoFY29sb3IYBSADKAUSFQoNc2hvd0dyaWRMaW5lcxgGIAEoBRpvCgdRdWFk",
             "TWFwEgoKAklEGAEgASgFEhYKDnBhcmVudEJvZHlOYW1lGAIgASgJEhAKCHZl",
             "cnRpY2VzGAMgAygBEg0KBWNvbG9yGAYgAygFEhAKCGlzSGlkZGVuGAQgASgI",
-            "Eg0KBWxhYmVsGAUgASgJIocCCghWaXpJbnB1dBITCgtmcmFtZU51bWJlchgB",
+            "Eg0KBWxhYmVsGAUgASgJIsQCCghWaXpJbnB1dBITCgtmcmFtZU51bWJlchgB",
             "IAEoAxJACglrZXlJbnB1dHMYAiABKAsyLS52aXpQcm90b2J1ZmZlck1lc3Nh",
             "Z2UuVml6SW5wdXQuS2V5Ym9hcmRJbnB1dBI1CgdyZXBsaWVzGAMgAygLMiQu",
             "dml6UHJvdG9idWZmZXJNZXNzYWdlLlZpekV2ZW50UmVwbHkSTgoVYnJvYWRj",
             "YXN0U3luY1NldHRpbmdzGAQgASgLMi8udml6UHJvdG9idWZmZXJNZXNzYWdl",
-            "LlZpekJyb2FkY2FzdFN5bmNTZXR0aW5ncxodCg1LZXlib2FyZElucHV0EgwK",
-            "BGtleXMYASABKAkiVQoNVml6RXZlbnRSZXBseRIWCg5ldmVudEhhbmRsZXJJ",
-            "RBgBIAEoCRINCgVyZXBseRgCIAEoCRIdChVldmVudEhhbmRsZXJEZXN0cm95",
-            "ZWQYAyABKAgihAIKDlZpekV2ZW50RGlhbG9nEhYKDmV2ZW50SGFuZGxlcklE",
-            "GAEgASgJEhUKDWRpc3BsYXlTdHJpbmcYAiABKAkSEwoLdXNlck9wdGlvbnMY",
-            "AyADKAkSIAoYZm9yY2VFdmVudERpYWxvZ01heGltaXplGAQgASgIEhkKEWR1",
-            "cmF0aW9uT2ZEaXNwbGF5GAUgASgBEiQKHHVzZVNpbUVsYXBzZWRUaW1lRm9y",
-            "RHVyYXRpb24YBiABKAgSHAoUdXNlQ29uZmlybWF0aW9uUGFuZWwYByABKAUS",
-            "FwoPaGlkZU9uU2VsZWN0aW9uGAggASgFEhQKDGRpYWxvZ0Zvcm1hdBgJIAEo",
-            "CSLoAgoYVml6QnJvYWRjYXN0U3luY1NldHRpbmdzEhwKFGZvcmNlVHJhaW5l",
-            "clNldHRpbmdzGAEgASgIEhQKDG9yYml0TGluZXNPbhgCIAEoBRIdChV0cnVl",
-            "VHJhamVjdG9yeUxpbmVzT24YAyABKAUSFgoOc3BhY2VjcmFmdENTb24YBCAB",
-            "KAUSEgoKcGxhbmV0Q1NvbhgFIAEoBRIVCg1zaG93SGlsbEZyYW1lGAYgASgF",
-            "EjoKDGRpYWxvZ0V2ZW50cxgHIAMoCzIkLnZpelByb3RvYnVmZmVyTWVzc2Fn",
-            "ZS5WaXpFdmVudFJlcGx5EkIKE2N1cnJlbnRFdmVudERpYWxvZ3MYCCADKAsy",
-            "JS52aXpQcm90b2J1ZmZlck1lc3NhZ2UuVml6RXZlbnREaWFsb2cSGQoRc2hv",
-            "d1ZlbG9jaXR5RnJhbWUYCSABKAUSGwoTdHJ1ZVBhdGhCb2R5U2V0dGluZxgK",
-            "IAMoBWIGcHJvdG8z"));
+            "LlZpekJyb2FkY2FzdFN5bmNTZXR0aW5ncxI7Cg1wbGF5YmFja1N0YXRlGAUg",
+            "ASgOMiQudml6UHJvdG9idWZmZXJNZXNzYWdlLlBsYXliYWNrU3RhdGUaHQoN",
+            "S2V5Ym9hcmRJbnB1dBIMCgRrZXlzGAEgASgJIlUKDVZpekV2ZW50UmVwbHkS",
+            "FgoOZXZlbnRIYW5kbGVySUQYASABKAkSDQoFcmVwbHkYAiABKAkSHQoVZXZl",
+            "bnRIYW5kbGVyRGVzdHJveWVkGAMgASgIIoQCCg5WaXpFdmVudERpYWxvZxIW",
+            "Cg5ldmVudEhhbmRsZXJJRBgBIAEoCRIVCg1kaXNwbGF5U3RyaW5nGAIgASgJ",
+            "EhMKC3VzZXJPcHRpb25zGAMgAygJEiAKGGZvcmNlRXZlbnREaWFsb2dNYXhp",
+            "bWl6ZRgEIAEoCBIZChFkdXJhdGlvbk9mRGlzcGxheRgFIAEoARIkChx1c2VT",
+            "aW1FbGFwc2VkVGltZUZvckR1cmF0aW9uGAYgASgIEhwKFHVzZUNvbmZpcm1h",
+            "dGlvblBhbmVsGAcgASgFEhcKD2hpZGVPblNlbGVjdGlvbhgIIAEoBRIUCgxk",
+            "aWFsb2dGb3JtYXQYCSABKAki6AIKGFZpekJyb2FkY2FzdFN5bmNTZXR0aW5n",
+            "cxIcChRmb3JjZVRyYWluZXJTZXR0aW5ncxgBIAEoCBIUCgxvcmJpdExpbmVz",
+            "T24YAiABKAUSHQoVdHJ1ZVRyYWplY3RvcnlMaW5lc09uGAMgASgFEhYKDnNw",
+            "YWNlY3JhZnRDU29uGAQgASgFEhIKCnBsYW5ldENTb24YBSABKAUSFQoNc2hv",
+            "d0hpbGxGcmFtZRgGIAEoBRI6CgxkaWFsb2dFdmVudHMYByADKAsyJC52aXpQ",
+            "cm90b2J1ZmZlck1lc3NhZ2UuVml6RXZlbnRSZXBseRJCChNjdXJyZW50RXZl",
+            "bnREaWFsb2dzGAggAygLMiUudml6UHJvdG9idWZmZXJNZXNzYWdlLlZpekV2",
+            "ZW50RGlhbG9nEhkKEXNob3dWZWxvY2l0eUZyYW1lGAkgASgFEhsKE3RydWVQ",
+            "YXRoQm9keVNldHRpbmcYCiADKAUqUAoNUGxheWJhY2tTdGF0ZRIUChBQTEFZ",
+            "QkFDS19TVE9QUEVEEAASFAoQUExBWUJBQ0tfUExBWUlORxABEhMKD1BMQVlC",
+            "QUNLX1BBVVNFRBACYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VizProtobufferMessage.PlaybackState), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizMessage), global::VizProtobufferMessage.VizMessage.Parser, new[]{ "CurrentTime", "CelestialBodies", "Spacecraft", "Cameras", "QuadMaps", "Settings", "Epoch", "Locations", "LiveSettings", "VizEventDialogs" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizMessage.Types.EpochDateTime), global::VizProtobufferMessage.VizMessage.Types.EpochDateTime.Parser, new[]{ "Year", "Month", "Day", "Hours", "Minutes", "Seconds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizMessage.Types.TimeStamp), global::VizProtobufferMessage.VizMessage.Types.TimeStamp.Parser, new[]{ "FrameNumber", "SimTimeElapsed" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizMessage.Types.CelestialBody), global::VizProtobufferMessage.VizMessage.Types.CelestialBody.Parser, new[]{ "BodyName", "Position", "Velocity", "Rotation", "Mu", "RadiusEq", "RadiusRatio", "ModelDictionaryKey" }, null, null, null),
@@ -250,7 +253,7 @@ namespace VizProtobufferMessage {
             new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizMessage.Types.Location), global::VizProtobufferMessage.VizMessage.Types.Location.Parser, new[]{ "StationName", "ParentBodyName", "RGPP", "GHatP", "FieldOfView", "Color", "Range", "MarkerScale", "IsHidden", "Label" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizMessage.Types.Ellipsoid), global::VizProtobufferMessage.VizMessage.Types.Ellipsoid.Parser, new[]{ "IsOn", "UseBodyFrame", "Position", "SemiMajorAxes", "Color", "ShowGridLines" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizMessage.Types.QuadMap), global::VizProtobufferMessage.VizMessage.Types.QuadMap.Parser, new[]{ "ID", "ParentBodyName", "Vertices", "Color", "IsHidden", "Label" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizInput), global::VizProtobufferMessage.VizInput.Parser, new[]{ "FrameNumber", "KeyInputs", "Replies", "BroadcastSyncSettings" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizInput.Types.KeyboardInput), global::VizProtobufferMessage.VizInput.Types.KeyboardInput.Parser, new[]{ "Keys" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizInput), global::VizProtobufferMessage.VizInput.Parser, new[]{ "FrameNumber", "KeyInputs", "Replies", "BroadcastSyncSettings", "PlaybackState" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizInput.Types.KeyboardInput), global::VizProtobufferMessage.VizInput.Types.KeyboardInput.Parser, new[]{ "Keys" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizEventReply), global::VizProtobufferMessage.VizEventReply.Parser, new[]{ "EventHandlerID", "Reply", "EventHandlerDestroyed" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizEventDialog), global::VizProtobufferMessage.VizEventDialog.Parser, new[]{ "EventHandlerID", "DisplayString", "UserOptions", "ForceEventDialogMaximize", "DurationOfDisplay", "UseSimElapsedTimeForDuration", "UseConfirmationPanel", "HideOnSelection", "DialogFormat" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VizProtobufferMessage.VizBroadcastSyncSettings), global::VizProtobufferMessage.VizBroadcastSyncSettings.Parser, new[]{ "ForceTrainerSettings", "OrbitLinesOn", "TrueTrajectoryLinesOn", "SpacecraftCSon", "PlanetCSon", "ShowHillFrame", "DialogEvents", "CurrentEventDialogs", "ShowVelocityFrame", "TruePathBodySetting" }, null, null, null)
@@ -259,6 +262,15 @@ namespace VizProtobufferMessage {
     #endregion
 
   }
+  #region Enums
+  public enum PlaybackState {
+    [pbr::OriginalName("PLAYBACK_STOPPED")] PlaybackStopped = 0,
+    [pbr::OriginalName("PLAYBACK_PLAYING")] PlaybackPlaying = 1,
+    [pbr::OriginalName("PLAYBACK_PAUSED")] PlaybackPaused = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   ///A VizMessage should contain all Basilisk Sim messages needed to visualize a single time step
@@ -288,15 +300,15 @@ namespace VizProtobufferMessage {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public VizMessage(VizMessage other) : this() {
-      currentTime_ = other.currentTime_ != null ? other.currentTime_.Clone() : null;
+      CurrentTime = other.currentTime_ != null ? other.CurrentTime.Clone() : null;
       celestialBodies_ = other.celestialBodies_.Clone();
       spacecraft_ = other.spacecraft_.Clone();
       cameras_ = other.cameras_.Clone();
       quadMaps_ = other.quadMaps_.Clone();
-      settings_ = other.settings_ != null ? other.settings_.Clone() : null;
-      epoch_ = other.epoch_ != null ? other.epoch_.Clone() : null;
+      Settings = other.settings_ != null ? other.Settings.Clone() : null;
+      Epoch = other.epoch_ != null ? other.Epoch.Clone() : null;
       locations_ = other.locations_.Clone();
-      liveSettings_ = other.liveSettings_ != null ? other.liveSettings_.Clone() : null;
+      LiveSettings = other.liveSettings_ != null ? other.LiveSettings.Clone() : null;
       vizEventDialogs_ = other.vizEventDialogs_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -553,7 +565,7 @@ namespace VizProtobufferMessage {
       }
       if (other.currentTime_ != null) {
         if (currentTime_ == null) {
-          CurrentTime = new global::VizProtobufferMessage.VizMessage.Types.TimeStamp();
+          currentTime_ = new global::VizProtobufferMessage.VizMessage.Types.TimeStamp();
         }
         CurrentTime.MergeFrom(other.CurrentTime);
       }
@@ -563,20 +575,20 @@ namespace VizProtobufferMessage {
       quadMaps_.Add(other.quadMaps_);
       if (other.settings_ != null) {
         if (settings_ == null) {
-          Settings = new global::VizProtobufferMessage.VizMessage.Types.VizSettingsPb();
+          settings_ = new global::VizProtobufferMessage.VizMessage.Types.VizSettingsPb();
         }
         Settings.MergeFrom(other.Settings);
       }
       if (other.epoch_ != null) {
         if (epoch_ == null) {
-          Epoch = new global::VizProtobufferMessage.VizMessage.Types.EpochDateTime();
+          epoch_ = new global::VizProtobufferMessage.VizMessage.Types.EpochDateTime();
         }
         Epoch.MergeFrom(other.Epoch);
       }
       locations_.Add(other.locations_);
       if (other.liveSettings_ != null) {
         if (liveSettings_ == null) {
-          LiveSettings = new global::VizProtobufferMessage.VizMessage.Types.LiveVizSettingsPb();
+          liveSettings_ = new global::VizProtobufferMessage.VizMessage.Types.LiveVizSettingsPb();
         }
         LiveSettings.MergeFrom(other.LiveSettings);
       }
@@ -594,9 +606,9 @@ namespace VizProtobufferMessage {
             break;
           case 10: {
             if (currentTime_ == null) {
-              CurrentTime = new global::VizProtobufferMessage.VizMessage.Types.TimeStamp();
+              currentTime_ = new global::VizProtobufferMessage.VizMessage.Types.TimeStamp();
             }
-            input.ReadMessage(CurrentTime);
+            input.ReadMessage(currentTime_);
             break;
           }
           case 18: {
@@ -617,16 +629,16 @@ namespace VizProtobufferMessage {
           }
           case 58: {
             if (settings_ == null) {
-              Settings = new global::VizProtobufferMessage.VizMessage.Types.VizSettingsPb();
+              settings_ = new global::VizProtobufferMessage.VizMessage.Types.VizSettingsPb();
             }
-            input.ReadMessage(Settings);
+            input.ReadMessage(settings_);
             break;
           }
           case 66: {
             if (epoch_ == null) {
-              Epoch = new global::VizProtobufferMessage.VizMessage.Types.EpochDateTime();
+              epoch_ = new global::VizProtobufferMessage.VizMessage.Types.EpochDateTime();
             }
-            input.ReadMessage(Epoch);
+            input.ReadMessage(epoch_);
             break;
           }
           case 74: {
@@ -635,9 +647,9 @@ namespace VizProtobufferMessage {
           }
           case 82: {
             if (liveSettings_ == null) {
-              LiveSettings = new global::VizProtobufferMessage.VizMessage.Types.LiveVizSettingsPb();
+              liveSettings_ = new global::VizProtobufferMessage.VizMessage.Types.LiveVizSettingsPb();
             }
-            input.ReadMessage(LiveSettings);
+            input.ReadMessage(liveSettings_);
             break;
           }
           case 90: {
@@ -7582,7 +7594,7 @@ namespace VizProtobufferMessage {
         public int ShowSpacecraftAsSprites {
           get { return showSpacecraftAsSprites_; }
           set {
-                        showSpacecraftAsSprites_ = value;
+            showSpacecraftAsSprites_ = value;
           }
         }
 
@@ -10631,9 +10643,10 @@ namespace VizProtobufferMessage {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public VizInput(VizInput other) : this() {
       frameNumber_ = other.frameNumber_;
-      keyInputs_ = other.keyInputs_ != null ? other.keyInputs_.Clone() : null;
+      KeyInputs = other.keyInputs_ != null ? other.KeyInputs.Clone() : null;
       replies_ = other.replies_.Clone();
-      broadcastSyncSettings_ = other.broadcastSyncSettings_ != null ? other.broadcastSyncSettings_.Clone() : null;
+      BroadcastSyncSettings = other.broadcastSyncSettings_ != null ? other.BroadcastSyncSettings.Clone() : null;
+      playbackState_ = other.playbackState_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10694,6 +10707,20 @@ namespace VizProtobufferMessage {
       }
     }
 
+    /// <summary>Field number for the "playbackState" field.</summary>
+    public const int PlaybackStateFieldNumber = 5;
+    private global::VizProtobufferMessage.PlaybackState playbackState_ = 0;
+    /// <summary>
+    /// Current playback state of Vizard
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::VizProtobufferMessage.PlaybackState PlaybackState {
+      get { return playbackState_; }
+      set {
+        playbackState_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as VizInput);
@@ -10711,6 +10738,7 @@ namespace VizProtobufferMessage {
       if (!object.Equals(KeyInputs, other.KeyInputs)) return false;
       if(!replies_.Equals(other.replies_)) return false;
       if (!object.Equals(BroadcastSyncSettings, other.BroadcastSyncSettings)) return false;
+      if (PlaybackState != other.PlaybackState) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10721,6 +10749,7 @@ namespace VizProtobufferMessage {
       if (keyInputs_ != null) hash ^= KeyInputs.GetHashCode();
       hash ^= replies_.GetHashCode();
       if (broadcastSyncSettings_ != null) hash ^= BroadcastSyncSettings.GetHashCode();
+      if (PlaybackState != 0) hash ^= PlaybackState.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10747,6 +10776,10 @@ namespace VizProtobufferMessage {
         output.WriteRawTag(34);
         output.WriteMessage(BroadcastSyncSettings);
       }
+      if (PlaybackState != 0) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) PlaybackState);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10765,6 +10798,9 @@ namespace VizProtobufferMessage {
       if (broadcastSyncSettings_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BroadcastSyncSettings);
       }
+      if (PlaybackState != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PlaybackState);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -10781,16 +10817,19 @@ namespace VizProtobufferMessage {
       }
       if (other.keyInputs_ != null) {
         if (keyInputs_ == null) {
-          KeyInputs = new global::VizProtobufferMessage.VizInput.Types.KeyboardInput();
+          keyInputs_ = new global::VizProtobufferMessage.VizInput.Types.KeyboardInput();
         }
         KeyInputs.MergeFrom(other.KeyInputs);
       }
       replies_.Add(other.replies_);
       if (other.broadcastSyncSettings_ != null) {
         if (broadcastSyncSettings_ == null) {
-          BroadcastSyncSettings = new global::VizProtobufferMessage.VizBroadcastSyncSettings();
+          broadcastSyncSettings_ = new global::VizProtobufferMessage.VizBroadcastSyncSettings();
         }
         BroadcastSyncSettings.MergeFrom(other.BroadcastSyncSettings);
+      }
+      if (other.PlaybackState != 0) {
+        PlaybackState = other.PlaybackState;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -10809,9 +10848,9 @@ namespace VizProtobufferMessage {
           }
           case 18: {
             if (keyInputs_ == null) {
-              KeyInputs = new global::VizProtobufferMessage.VizInput.Types.KeyboardInput();
+              keyInputs_ = new global::VizProtobufferMessage.VizInput.Types.KeyboardInput();
             }
-            input.ReadMessage(KeyInputs);
+            input.ReadMessage(keyInputs_);
             break;
           }
           case 26: {
@@ -10820,9 +10859,13 @@ namespace VizProtobufferMessage {
           }
           case 34: {
             if (broadcastSyncSettings_ == null) {
-              BroadcastSyncSettings = new global::VizProtobufferMessage.VizBroadcastSyncSettings();
+              broadcastSyncSettings_ = new global::VizProtobufferMessage.VizBroadcastSyncSettings();
             }
-            input.ReadMessage(BroadcastSyncSettings);
+            input.ReadMessage(broadcastSyncSettings_);
+            break;
+          }
+          case 40: {
+            playbackState_ = (global::VizProtobufferMessage.PlaybackState) input.ReadEnum();
             break;
           }
         }

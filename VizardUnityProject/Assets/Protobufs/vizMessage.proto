@@ -407,16 +407,23 @@ message VizMessage{
     repeated VizEventDialog vizEventDialogs = 11;  // CHECKED EVERY MESSAGE
 }
 
+enum PlaybackState{
+    PLAYBACK_STOPPED = 0;
+    PLAYBACK_PLAYING = 1;
+    PLAYBACK_PAUSED = 2;
+}
+
 message VizInput{ // Message sent from Vizard to BSK containing user inputs since last send
 
     message KeyboardInput{ // Submessage containing of all Vizard recorded keys
         string keys = 1;
     }
 
-    int64 frameNumber = 1;                               // Frame number when message was sent
+    int64 frameNumber = 1; // Frame number when message was sent
     KeyboardInput keyInputs = 2;
-    repeated VizEventReply replies = 3;                  // Vector of VizEventReply submessages
-    VizBroadcastSyncSettings broadcastSyncSettings = 4;  // Sync settings submessage
+    repeated VizEventReply replies = 3; // Vector of VizEventReply submessages
+    VizBroadcastSyncSettings broadcastSyncSettings = 4; // Sync settings submessage
+    PlaybackState playbackState = 5; // Current playback state of Vizard
 }
 
 message VizEventReply{

@@ -111,6 +111,8 @@ public class DirectCommunicationController : MonoBehaviour
         NetMQConfig.Cleanup();
     }
 
+    private readonly MessageLogger _logger = new MessageLogger();
+
     /// <summary>
     /// Returns the correct response for a Basilisk request message
     /// </summary>

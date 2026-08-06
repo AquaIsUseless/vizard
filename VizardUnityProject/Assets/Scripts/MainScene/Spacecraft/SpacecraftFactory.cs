@@ -60,8 +60,9 @@ public class SpacecraftFactory : MonoBehaviour
 			DataManager.ScenarioObjectsContainer);
 
 		spacecraft.name = scName;
-		
-		string parentSpacecraftName = spacecraft.GetComponent<SpacecraftController>().InitializeSpacecraft(spacecraftIndex);
+
+
+        string parentSpacecraftName = spacecraft.GetComponent<SpacecraftController>().InitializeSpacecraft(spacecraftIndex);
 		
 		//Add the current spacecraft to the list of all spacecraft in the current viz
 		SpacecraftStateUtilities.SpacecraftList.Add (spacecraft);
@@ -71,8 +72,12 @@ public class SpacecraftFactory : MonoBehaviour
 		if (parentSpacecraftName==""){
 			if (!SpacecraftStateUtilities.SpacecraftMsgOnly)
 			{
-				// Create a new GameObject using the OrbitLine Template
-				GameObject orbitLine =
+				//Register the spacecraft with the MapManager to display its position on the map
+                MapManager.Instance.RegisterSpacecraft(spacecraftIndex);
+
+
+                // Create a new GameObject using the OrbitLine Template
+                GameObject orbitLine =
 					Instantiate(Resources.Load("Prefabs/OrbitLineTemplate") as GameObject, DataManager.ScenarioObjectsContainer);
 
 				orbitLine.GetComponent<OsculatingOrbitLine>().InitializeOrbitLine(spacecraft, spacecraftIndex, true);

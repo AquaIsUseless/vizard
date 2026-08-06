@@ -146,6 +146,8 @@ public class DirectCommunicationController : MonoBehaviour
             requestString = "SIM_UPDATE";
         }
 
+        _logger.LogReceived(requestString, response);
+
         //Take the correct action for the Basilisk request
         switch (requestString)
         {
@@ -253,6 +255,7 @@ public class DirectCommunicationController : MonoBehaviour
         byte[] data = message[3].ToByteArray();
         //Parse the vizMessage from the third frame
         VizMessage vizMessage = VizMessage.Parser.ParseFrom(data);
+        _logger.Log(vizMessage.CurrentTime.FrameNumber.ToString());
         //Add it to the message dictionary in MessageList
         MessageList.AddLiveMessage(vizMessage);
     }
